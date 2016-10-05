@@ -33,6 +33,11 @@ namespace GrandFinale.WPF.ViewModel
                 return ServiceLocator.Current.GetInstance<MainViewModel>();
             }
         }
+
+        public AddPokemonVM AddPokemon
+        {
+            get { return new AddPokemonVM(Main);  }
+        }
         
         public static void Cleanup()
         {

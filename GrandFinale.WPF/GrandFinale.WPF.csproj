@@ -75,9 +75,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddPokemonWindow.xaml.cs">
+      <DependentUpon>AddPokemonWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\AddPokemonVM.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\PokemonVM.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Page Include="AddPokemonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
