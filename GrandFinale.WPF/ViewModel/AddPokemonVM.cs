@@ -27,7 +27,7 @@ namespace GrandFinale.WPF.ViewModel
         {
             //Zien we zo wel.
             Pokemon.Pokindex = -1;
-            main.AddPokemon(Pokemon);
+            main.Pokemons.Add(Pokemon);
             window.Close();
            
         }

@@ -9,7 +9,7 @@ namespace GrandFinale.WPF.ViewModel
 
     public class MainViewModel : ViewModelBase
     {
-        private AddPokemonWindow _window;
+     
 
         public ICommand AddPokemonCommand { get; set; }
 
@@ -17,7 +17,7 @@ namespace GrandFinale.WPF.ViewModel
 
         public MainViewModel()
         {
-            AddPokemonCommand = new RelayCommand(AddPokemon);
+            AddPokemonCommand = new RelayCommand<PokemonVM>(AddPokemon);
 
             Pokemons = new ObservableCollection<PokemonVM>();
             Pokemons.Add(new ViewModel.PokemonVM()
@@ -38,7 +38,8 @@ namespace GrandFinale.WPF.ViewModel
         internal void AddPokemon(PokemonVM pokemon)
         {
             //View hiden
-            _window.Close();
+            var window = new AddPokemonWindow();
+            window.Show();
         }
 
     }
